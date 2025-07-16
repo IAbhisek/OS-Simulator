@@ -1,0 +1,131 @@
+bsody, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+  background: linear-gradient(135deg, #e9e9f3 0%, #b3b3c6 100%);
+  color: #222;
+  overflow: hidden;
+}
+
+#desktop {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: url('https://wallpapercave.com/wp/wp2757874.jpg') center/cover no-repeat;
+}
+
+.taskbar {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 48px;
+  background: rgba(245, 245, 250, 0.92);
+  border-top: 1px solid #c3c3d1;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.08);
+  display: flex;
+  align-items: center;
+  padding: 0 18px;
+  z-index: 1000;
+}
+
+.app-launcher {
+  display: flex;
+  gap: 10px;
+}
+
+.app-icon {
+  width: 38px;
+  height: 38px;
+  background: linear-gradient(145deg, #f5f5fa 60%, #e0e0ef 100%);
+  border-radius: 8px;
+  border: 1px solid #d1d1e0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+.app-icon:hover {
+  background: #e6e6f2;
+  transform: scale(1.08);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.window {
+  position: absolute;
+  min-width: 340px;
+  min-height: 220px;
+  background: #f8f8fc;
+  border-radius: 10px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  border: 1.5px solid #c3c3d1;
+  overflow: hidden;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.2s;
+}
+.window:active, .window.maximized {
+  box-shadow: 0 12px 36px rgba(0,0,0,0.22);
+  border-color: #7a7ad1;
+}
+
+.window-header {
+  background: linear-gradient(90deg, #e9e9f3 0%, #d1d1e7 100%);
+  padding: 8px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: move;
+  user-select: none;
+  border-bottom: 1px solid #d1d1e0;
+}
+
+.window-title {
+  font-weight: 500;
+  font-size: 1rem;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.window-controls {
+  display: flex;
+  gap: 7px;
+}
+
+.window-btn {
+  width: 16px;
+  height: 16px;
+  border: none;
+  border-radius: 50%;
+  background: #e0e0e0;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.08);
+  margin-left: 2px;
+}
+.window-btn.close { background: #ff5f56; }
+.window-btn.min { background: #ffbd2e; }
+.window-btn.max { background: #27c93f; }
+.window-btn:hover { filter: brightness(1.15); box-shadow: 0 2px 6px rgba(0,0,0,0.13); }
+
+.window-content {
+  flex: 1;
+  padding: 18px;
+  overflow: auto;
+  color: #222;
+  background: #f8f8fc;
+}
+
+@media (max-width: 600px) {
+  .window {
+    min-width: 90vw;
+    min-height: 40vh;
+    left: 5vw !important;
+    top: 10vh !important;
+  }
+} 
