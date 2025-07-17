@@ -1,0 +1,14 @@
+{
+    "name": "root",
+    "type": "folder",
+    "children": [   
+      {
+        "name": "Documents",
+        "type": "folder",
+        "children": [
+          { "name": "readme.txt", "type": "file", "content": "Welcome to Mini-OS!" }
+        ]
+      }
+    ]
+  }
+  

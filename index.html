@@ -1,13 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Browser OS Simulator</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1"><!-- responsive layout [1] -->
+  <title>Mini-OS</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <!-- Desktop -->
   <div id="desktop"></div>
-  <script src="os.js"></script>
+
+  <!-- Taskbar -->
+  <div id="taskbar">
+    <button id="start-btn">Start</button>
+    <div id="taskbar-windows"></div>
+    <span id="clock"></span>
+  </div>
+
+  <!-- Start Menu -->
+  <ul id="start-menu"></ul>
+
+  <script src="script.js"></script>
 </body>
-</html> 
+</html>
