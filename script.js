@@ -5,6 +5,7 @@ const startMenu = document.getElementById("start-menu");
 const startBtn  = document.getElementById("start-btn");
 const taskbar   = document.getElementById("taskbar-windows");
 const clock     = document.getElementById("clock");
+const desktopClock = document.getElementById("desktop-clock");
 
 const fileTree = {                // mock file-system
   name:"root",type:"folder",children:[
@@ -187,5 +188,8 @@ function aboutApp(){
 
 /* ===== Live Clock ===== */
 setInterval(()=>{
-  clock.textContent=new Date().toLocaleTimeString();
+  clock.textContent = new Date().toLocaleTimeString();
+  if (desktopClock) {
+    desktopClock.textContent = new Date().toLocaleTimeString();
+  }
 },1000);

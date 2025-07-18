@@ -11,6 +11,19 @@ html,body{
   background:#008080 url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAB...") repeat;
   overflow:hidden;
 }
+#desktop-clock {
+  position: absolute;
+  top: 18px;
+  right: 28px;
+  background: rgba(245, 245, 250, 0.92);
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  z-index: 100;
+  letter-spacing: 1px;
+}
 
 /* ===== Icons ===== */
 .icon{
